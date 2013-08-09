@@ -1,6 +1,8 @@
 #  This program will take an XML file from a local BLAST search (not internet
 # based) and will print the relevent information and return it.
 
+#NOTE: Major bugs have been found in this code.  Rewriting is in progress as of 8/9/13 
+
 #Give the function the file name and the pathway
 def local_XML_interpreter(the_file_name, file_pathway): 
     import re
