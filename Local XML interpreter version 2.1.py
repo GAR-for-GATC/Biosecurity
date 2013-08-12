@@ -1,6 +1,6 @@
 #---Notes for version 2.1---#
 #   Version 2.1 includes an if statement that will end the program if
-# if it runs into the words "***** No hits found *****", which indicate that
+# it runs into the words "***** No hits found *****", which indicate that
 # no results appear in the xml file.
 
 #---Notes for version 2---#
