@@ -563,20 +563,6 @@ def SQL_SELECT_rows(db_name, db_path, table_name):
     open_db.close() 
     return
 
-###This changes one value in one row in a table inside a database
-##def SQL_UPDATE_row(db_name, db_path, table_name, column_name ,new_value, id_number):
-##    import sqlite3
-##    open_db = sqlite3.connect(db_path + "\\" + db_name + ".db")
-##
-##    usable_string = " \'\'\'  UPDATE " + table_name + " SET " + column_name + " = \'" + new_value + '\' WHERE id = ' + str(id_number) + " \'\'\' "
-##    print usable_string
-##
-##    open_db.execute(usable_string)
-##    open_db.commit()
-##    
-##    open_db.close()
-##    
-##    return
 
 #This changes one value in one row in a table inside a database
 def SQL_UPDATE_row(db_name, db_path, table_name, column_name ,new_value, id_number):
