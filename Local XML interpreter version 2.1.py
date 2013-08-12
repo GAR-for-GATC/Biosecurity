@@ -124,10 +124,14 @@ def local_XML_interpreter(the_file_name, file_pathway):
                         if parameters == "No hits found":
                             print "-----------------------------------------------"
                             print '\n'
-                            print "No hits found."
+                            print "No hits found in one BLAST search."
+                            print "The BLAST search with no hits will not have the following values in it's SQL table.
+                            print " "
+                            print "sequence_length, sequence_fasta_name, score_value, expect_value, identities_value
+                            print "gaps_value, strand_value, subject_and_query_lines.
                             print "\n"
                             print "\n"
-                            return
+                            
 
                         elif parameters == "Identities":
 
