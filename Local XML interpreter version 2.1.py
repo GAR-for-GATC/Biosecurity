@@ -1,3 +1,9 @@
+#---Notes for version 2.1---#
+#   Version 2.1 includes an if statement that will end the program if
+# if it runs into the words "***** No hits found *****", which indicate that
+# no results appear in the xml file.
+
+#---Notes for version 2---#
 #   This is an improved version of the XML parser.
 # Changes to the original XML parser are:
 #  1) The elimination of the reference value (it is worthless)
@@ -101,7 +107,7 @@ def local_XML_interpreter(the_file_name, file_pathway):
             #print "wrote: ", green
         
 
-        my_list_of_parameters = ["Identities", "Gapped"]
+        my_list_of_parameters = ["No hits found", "Identities", "Gapped"]
         unique_id_counter = 1
 
         for parameters in my_list_of_parameters:
@@ -114,8 +120,16 @@ def local_XML_interpreter(the_file_name, file_pathway):
                     # s is the line from the file                
                     if there.search(s):
                         #print("Line %s: %r" % (i, s))
+                        
+                        if parameters == "No hits found":
+                            print "-----------------------------------------------"
+                            print '\n'
+                            print "No hits found."
+                            print "\n"
+                            print "\n"
+                            return
 
-                        if parameters == "Identities":
+                        elif parameters == "Identities":
 
                             #___sequence_length___#
                             the_sequence_length = grab_lines(green , file_pathway, i, 1, 3, "up")
