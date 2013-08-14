@@ -183,7 +183,6 @@ def local_XML_interpreter(the_file_name, file_pathway):
     # program are a set number of rows away from the important values that
     # need to be located.
 
-    ####Example fasta files are provided at the end of the program.####
 
     #~~~Creates database 
     db_name = "temp_db"
